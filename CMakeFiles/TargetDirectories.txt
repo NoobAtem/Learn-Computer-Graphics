@@ -1,0 +1,5 @@
+/home/noob212/Documents/Computer Science/Graphics/CMakeFiles/static_graphics.dir
+/home/noob212/Documents/Computer Science/Graphics/CMakeFiles/dynamic_graphics.dir
+/home/noob212/Documents/Computer Science/Graphics/CMakeFiles/graphics.dir
+/home/noob212/Documents/Computer Science/Graphics/CMakeFiles/edit_cache.dir
+/home/noob212/Documents/Computer Science/Graphics/CMakeFiles/rebuild_cache.dir
