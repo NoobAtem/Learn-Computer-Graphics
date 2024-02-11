@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,libdynamic_graphics.so -o lib/libdynamic_graphics.so CMakeFiles/dynamic_graphics.dir/src/gcl_geometry.c.o CMakeFiles/dynamic_graphics.dir/src/gcl_init.c.o CMakeFiles/dynamic_graphics.dir/src/gcl_math.c.o 

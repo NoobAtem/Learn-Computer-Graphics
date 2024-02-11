@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib/libstatic_graphics.a CMakeFiles/static_graphics.dir/src/gcl_geometry.c.o CMakeFiles/static_graphics.dir/src/gcl_init.c.o CMakeFiles/static_graphics.dir/src/gcl_math.c.o
+/usr/bin/ranlib lib/libstatic_graphics.a

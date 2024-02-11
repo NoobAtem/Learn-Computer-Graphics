@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/graphics.dir/test.c.o CMakeFiles/graphics.dir/src/gcl_geometry.c.o CMakeFiles/graphics.dir/src/gcl_init.c.o CMakeFiles/graphics.dir/src/gcl_math.c.o -o bin/graphics  -Wl,-rpath,"/home/noob212/Documents/Computer Science/Graphics/lib" -L/usr/lib/x86_64-linux-gnu  -lSDL2 lib/libstatic_graphics.a lib/libdynamic_graphics.so 
