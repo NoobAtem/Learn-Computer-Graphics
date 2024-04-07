@@ -30,7 +30,6 @@ void update(void* arg, size_t size){
     struct UpdateParameters* param = (struct UpdateParameters*)arg;
 
     /* Test Geometry Here */
-    test
 
     //gcl_drawTriangle(&param->config, 100, 100, 200, 200, 50, 140);
     //gcl_drawRect(&param->config, 100, 100, 100, 100);
