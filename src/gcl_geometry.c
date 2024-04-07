@@ -226,11 +226,11 @@ void gcl_fillTriangle_Barycentric(struct GCL_ShapeConfig* config, int x0, int y0
     for (int i = minX; i <= maxX; i++){
         for (int j = minY; j <= maxY; j++){
             int q_x = i - vsc1_x, q_y = j - vsc1_y;
-            double denominator = (double)(gcl_crossProduct2D(vsc1_x, vsc1_y, vsc2_x, vsc2_y));
+            double denominator = (double)(gcl_dot_product2D(vsc1_x, vsc1_y, vsc2_x, vsc2_y));
             if (denominator == 0)
                 return;
-            double s = (double)(gcl_crossProduct2D(q_x, q_y, vsc2_x, vsc2_y)/denominator);
-            double t = (double)(gcl_crossProduct2D(vsc1_x, vsc1_y, q_x, q_y)/denominator);
+            double s = (double)(gcl_dot_product2D(q_x, q_y, vsc2_x, vsc2_y)/denominator);
+            double t = (double)(gcl_dot_product2D(vsc1_x, vsc1_y, q_x, q_y)/denominator);
 
             if ((s >= 0) && (t >= 0) && (s + t <= 1)){
                 SDL_RenderDrawPoint(config->render, i, j);
@@ -288,4 +288,4 @@ void gcl_fillCircle_BoundingCircle(struct GCL_ShapeConfig* config, int xc, int y
 }
 
 /* Curve Approximation */
-
+// Draw Bezier Curve

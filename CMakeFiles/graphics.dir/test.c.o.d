@@ -2,6 +2,8 @@ CMakeFiles/graphics.dir/test.c.o: \
  /home/noob212/Documents/Computer\ Science/Graphics/test.c \
  /usr/include/stdc-predef.h \
  /home/noob212/Documents/Computer\ Science/Graphics/src/gcl_init.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
+ /home/noob212/Documents/Computer\ Science/Graphics/src/gcl_attrib.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
@@ -176,7 +178,5 @@ CMakeFiles/graphics.dir/test.c.o: \
  /usr/include/SDL2/SDL_shape.h /usr/include/SDL2/SDL_system.h \
  /usr/include/SDL2/SDL_timer.h /usr/include/SDL2/SDL_version.h \
  /usr/include/SDL2/SDL_locale.h /usr/include/SDL2/SDL_misc.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
- /home/noob212/Documents/Computer\ Science/Graphics/src/gcl_attrib.h \
  /home/noob212/Documents/Computer\ Science/Graphics/src/gcl_geometry.h \
  /home/noob212/Documents/Computer\ Science/Graphics/src/gcl_math.h

@@ -14,7 +14,11 @@ extern "C"{
 #####################################################################
 */
 
+
 // Library
+#include <SDL2/SDL.h>
+#include <stdlib.h>
+#include <stdint.h>
 
 // GCL_RGBA macros
 #define GCL_COLOR(x, y, w, z) (struct GCL_RGBA){.r = x, .g = y, .b = w, .a = z}
@@ -34,6 +38,18 @@ struct GCL_RGBA{
     Uint8 b; // Blue
     Uint8 a; // Alpha
 };
+
+
+// Matrix & Vectors
+typedef struct{
+    float* data;
+    size_t size;
+} Vec;
+
+typedef struct{
+    Vec* vector;
+    size_t size[2];
+} Mat;
 
 
 #endif

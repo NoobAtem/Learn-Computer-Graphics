@@ -30,8 +30,7 @@ void update(void* arg, size_t size){
     struct UpdateParameters* param = (struct UpdateParameters*)arg;
 
     /* Test Geometry Here */
-    //gcl_drawLine_DDA(&param->config, 10, 10, 200, 200);
-    //gcl_drawLine_Bresenham(&param->config, 10, 10, 200, 200);
+
     //gcl_drawTriangle(&param->config, 100, 100, 200, 200, 50, 140);
     //gcl_drawRect(&param->config, 100, 100, 100, 100);
     //gcl_drawCircle_Polynomial(&param->config, 100, 100, 10);
@@ -54,8 +53,6 @@ int main(){
     param.color = GCL_BLACK;
     param.config.render = app->render;
     param.config.fill = GCL_YELLOW;
-
-
 
     gcl_run(app, &param, sizeof(struct UpdateParameters));
     return 0;

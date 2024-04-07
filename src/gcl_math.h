@@ -4,7 +4,9 @@ extern "C"{
 
 #ifndef GCL_MATH_H
 #define GCL_MATH_H
-#include <math.h>
+
+#include "gcl_attrib.h"
+#include <string.h>
 
 /*
 #####################################################################
@@ -55,8 +57,23 @@ double gcl_newtonRoot(gcl_AlgebraicParameter param, gcl_AlgebraicFunction func, 
 double gcl_sqrt(double x, int n);
 
 // Useful Functions
-double gcl_crossProduct2D(double a1, double b1, double a2, double b2);
+float gcl_dot_product2D(float x, float y, float w, float z);
+int gcl_fact(int i);
+double gcl_comb(int n, int k);
 
+// Define in gcl_attr.h
+Vec gcl_vector_init(size_t size);
+Mat gcl_matrix_init(size_t row, size_t col);
+
+// Matrix & Vector Functions
+/*void gcl_displayVector(Vec* vec);
+void gcl_displayMatrix(Mat* mat);
+Vec gcl_vector_dot(Vec a, Vec b); // Dot Product
+Mat gcl_matrix_dot(Mat a, Mat b);*/
+
+// Graphics Math
+// Linear Interpolation
+double gcl_lerp(double x0, double y0, double x1, double y1, double t);
 
 #endif
 

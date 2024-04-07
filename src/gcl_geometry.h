@@ -21,7 +21,6 @@ extern "C"{
 
 
 // Libraries
-#include <SDL2/SDL.h>
 #include "gcl_attrib.h"
 #include <stdbool.h>
 
@@ -70,7 +69,7 @@ bool gcl_rectInsideTest(int x, int y, int pixel_x, int pixel_y, int width, int h
 bool gcl_circleInsideTest(int xc, int yc, int pixel_x, int pixel_y, int r);
 
 // Curve Approximation
-
+// Draw Bezier Curve
 
 #endif
 

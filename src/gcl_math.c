@@ -59,6 +59,84 @@ double gcl_sqrt(double x, int n){
 }
 
 // Useful Functions
-double gcl_crossProduct2D(double a1, double b1, double a2, double b2){
-    return a1*b2 - a2 * b1;
+
+// Matrix & Vector
+Vec gcl_vector_init(size_t size){
+    Vec vector;
+    vector.data = (float*)malloc(size*sizeof(float));
+    if (vector.data == NULL){
+        printf("Failed to Initilize Vector\n");
+        return vector;
+    }
+
+    memset(vector.data, 0.0f, size*sizeof(float));
+    vector.size = size;
+    return vector;
+}
+
+Mat gcl_matrix_init(size_t row, size_t col){
+    Mat matrix;
+    for (size_t i = 0; i < row; i++){
+        // Create Row Vectors
+        matrix.vector = (Vec*)malloc(row*sizeof(Vec));
+        *(matrix.vector+i) = gcl_vector_init(col);
+    }
+    matrix.size[0] = row;
+    matrix.size[1] = col;
+    return matrix;
+}
+
+void gcl_displayVector(Vec* vec){
+    printf("[");
+    if (vec->size > 0) printf("%f", vec->data[0]);
+    for (size_t i = 1; i < vec->size; i++){
+        printf(", %f", vec->data[i]);
+    }
+    printf("]\n");
+}
+
+void gcl_displayMatrix(Mat* mat){
+    printf("[");
+    for (size_t i = 0; i < mat->size[0]; i++){
+        gcl_displayVector(&mat->vector[i]);
+    }
+    printf("]\n");
+}
+
+Vec gcl_vector_dot(Vec a, Vec b){
+    if (a.size != b.size)
+        return (Vec){NULL};
+    Vec dot = gcl_vector_init(a.size);
+
+    for (size_t i = 0; i < a.size; i++){
+        float result = 0.0f;
+        for (size_t j = 0; j < b.size; j++){
+            result += a.data[i]*b.data[j];
+        }
+        dot.data[i] = result;
+    }
+    return dot;
+}
+
+float gcl_dot_product2D(float x, float y, float w, float z){
+    return x*w - z*y;
+}
+
+int gcl_fact(int i){
+   if(i < 1) return 0;
+   return gcl_fact(i-1) + gcl_fact(i-2);
+}
+
+double gcl_comb(int n, int k){
+    return gcl_fact(n)/(gcl_fact(k)*gcl_fact(n-k));
+}
+
+// Graphics Math
+// Linear Interpolation
+double gcl_lerp(double x0, double y0, double x1, double y1, double t){
+    return y0 + t*(y1-y0)/(x1-x0);	
+}
+
+double gcl_recursive_bezier_curve(double t, double* x, double* y, int n){
+    
 }
