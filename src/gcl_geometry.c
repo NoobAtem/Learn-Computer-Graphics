@@ -172,11 +172,11 @@ bool gcl_triangleInsideTest(int x0, int y0, int y1, int x2, int y2, int point_x,
 
 // Fill Polygon
 void gcl_fillRect(struct GCL_ShapeConfig* config, int x, int y, int width, int height){
-    int steps_x = width + x, steps_y = height + y;
+    SDL_SetRenderDrawColor(config->render, GCL_GET(config->fill));
 
-    for (; y < steps_y; y++){
-        for (; x < steps_x; x++){
-            SDL_RenderDrawPoint(config->render, x, y);
+    for (; y < y+height; y++){
+        for (int x1 = x; x1 < x+width; x1++){
+            SDL_RenderDrawPoint(config->render, x1, y);
         }
     }
 }
